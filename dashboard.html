@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - Study Tracker Pro</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="app-container">
+
+  <!-- Sidebar -->
+  <aside class="sidebar glass">
+    <h2>AIR STUDY TRACKER</h2>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Dashboard</a></li>
+        <li><a href="progress.html">Add Progress</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Panel -->
+  <main class="main-panel glass">
+    <div class="profile">
+      <label for="avatarInput">
+        <img id="profileAvatar" class="avatar" src="default-avatar.png" alt="Avatar" title="Click to change profile picture">
+      </label>
+      <input type="file" id="avatarInput" accept="image/png, image/jpeg" style="display:none;">
+      <div>
+        <h2 id="username"></h2>
+        <p>Total Chapters: 76 | Deadline: Nov 1, 2026</p>
+      </div>
+    </div>
+
+    <section class="progress-section">
+      <h3>Your Overall Progress</h3>
+      <div class="progress-bar">
+        <div id="progressGreen"></div>
+        <div id="progressRed"></div>
+      </div>
+      <p id="progressText"></p>
+    </section>
+
+    <section class="time-section">
+      <h3>Remaining Time & Plan</h3>
+      <p id="timeLeft"></p>
+      <p id="weeklyPlan"></p>
+      <p id="monthlyPlan"></p>
+    </section>
+
+    <section class="history-section">
+      <h3>Monthly Progress</h3>
+      <canvas id="historyChart" width="400" height="250"></canvas>
+    </section>
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
